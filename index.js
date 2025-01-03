@@ -1,3 +1,5 @@
+'use strict';
+
 const initialize = require("./src/initialize");
 
-initialize();
+module.exports = initialize;

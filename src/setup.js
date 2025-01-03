@@ -51,12 +51,12 @@ class SetupLibrary {
 
     updatePackageJson(file) {
         // Step 1: Read the existing package.json
-        const packageJsonPath = path.join(process.cwd(), 'package.json');
+        const packageJsonPath = path.join(this.baseFolder, 'package.json');
 
         if (!fs.existsSync(packageJsonPath)) {
             // Create the file if it doesn't exist
             fs.writeFileSync(packageJsonPath, '{}');
-            console.log('package.json file created!');
+            // console.log('package.json file created!');
         }
 
         fs.readFile(packageJsonPath, 'utf8', (err, data) => {
@@ -76,7 +76,7 @@ class SetupLibrary {
 
             // Step 3: Modify the object to add overrides
             packageJson = {
-                "name": "mez-express-app",
+                "name": "express-app",
                 "version": "1.0.0",
                 "description": "",
                 "main": "app.js",
@@ -86,7 +86,7 @@ class SetupLibrary {
                     "watch": "nodemon --watch src/app.js --watch ./package.json --exec npm run start",
                     "test": "echo \"Error: no test specified\" && exit 1"
                 },
-                "author": "Moones Mezher",
+                "author": "CR7",
                 "license": "ISC"
             };
 
@@ -96,7 +96,7 @@ class SetupLibrary {
                     console.error('Error writing package.json:', writeError);
                     return;
                 }
-                console.log('package.json updated successfully!');
+                // console.log('package.json updated successfully!');
             });
     });
 }

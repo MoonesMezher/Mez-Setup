@@ -1,9 +1,10 @@
 const content = require('./content');
 const SetupLibrary = require('./setup');
 
-const setup = new SetupLibrary(process.cwd());
 
-async function initialize() {
+async function initialize(path) {
+    const setup = new SetupLibrary(path);
+
     try {
         setup.updatePackageJson();
         await setup.createFolder('src')

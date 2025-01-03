@@ -18,6 +18,8 @@ app.use(express.static(path.join(__dirname, "dist")));
 
 app.use('/api/users', userRouter);
 
+app.use("*", (req, res) => res.status(404).json({ message: "Not found" }));
+
 module.exports = app;`,
 
 expressServerCode: 

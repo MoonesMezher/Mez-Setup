@@ -1,22 +1,18 @@
 {
   "name": "mez-setup",
-  "version": "1.0.0",
   "homepage": "https://github.com/MoonesMezher/mez-setup",
+  "version": "1.0.3",
   "description": "It is a pure and open source node js library that provides easy setup and helpfull structure",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "node index.js"
-  },
   "author": "Moones Mezher",
   "license": "MIT",
   "keywords": [
-    "setup",
+    "file structure",
     "nodejs",
     "expressjs",
     "js",
     "javascript",
-    "structure",
-    "MVC"
+    "MVC",
+    "setup"
   ]
 }
